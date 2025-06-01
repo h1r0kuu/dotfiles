@@ -112,7 +112,39 @@ return {
         },
         
         -- Java
-        jdtls = {},
+        jdtls = {
+          settings = {
+            java = {
+              eclipse = {
+                downloadSources = true,
+              },
+              configuration = {
+                updateBuildConfiguration = "interactive",
+                runtimes = {
+                  {
+                    name = "JavaSE-17", 
+                    path = "C:\\Program Files\\Java\\jdk-24",
+                  },
+                },
+              },
+              maven = {
+                downloadSources = true,
+              },
+              references = {
+                includeDecompiledSources = true,
+              },
+              sources = {
+                organizeImports = {
+                  starThreshold = 9999,
+                  staticStarThreshold = 9999,
+                },
+              },
+              contentProvider = {
+                preferred = "fernflower",
+              },
+            },
+          },
+        },
         
         -- Tailwind CSS
         tailwindcss = {
